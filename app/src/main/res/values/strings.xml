@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DASADA</string>
+    <string name="add_button">Add item</string>
+    <string name="remove_button">Remove rnd item</string>
+    <string name="smooth_scroll">Scroll to index %1d</string>
+    <string name="add_index_content_description">Add index</string>
+    <string name="subtract_index_content_description">Subtract index</string>
+    <string name="columns_text">Columns: %1d</string>
+    <string name="rows_text">Rows: %1d</string>
+    <string name="rtl_switch">RTL enabled</string>
+</resources>

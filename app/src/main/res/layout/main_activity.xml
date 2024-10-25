@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/recycler_background"
+        android:clipToPadding="false"
+        android:minHeight="50dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item" />
+
+    <View
+        android:id="@+id/background_shadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-10dp"
+        android:background="@color/black_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_button" />
+
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:text="@string/add_button"
+        app:layout_constraintBottom_toBottomOf="@id/remove_button"
+        app:layout_constraintEnd_toStartOf="@id/remove_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/remove_button" />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:text="@string/remove_button"
+        app:layout_constraintBottom_toTopOf="@id/add_scroll_index"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/add_button" />
+
+    <Button
+        android:id="@+id/smooth_scroll"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:text="@string/smooth_scroll"
+        app:layout_constraintBottom_toBottomOf="@id/subtract_scroll_index"
+        app:layout_constraintEnd_toStartOf="@+id/add_scroll_index"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_scroll_index" />
+
+    <ImageButton
+        android:id="@+id/add_scroll_index"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/add_index_content_description"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@id/subtract_scroll_index"
+        app:layout_constraintEnd_toEndOf="@id/remove_button"
+        app:layout_constraintStart_toStartOf="@id/remove_button" />
+
+    <ImageButton
+        android:id="@+id/subtract_scroll_index"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/subtract_index_content_description"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toTopOf="@id/columns_add"
+        app:layout_constraintEnd_toEndOf="@id/add_scroll_index"
+        app:layout_constraintStart_toStartOf="@id/add_scroll_index" />
+
+    <TextView
+        android:id="@+id/columns_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/columns_text"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/columns_subtract"
+        app:layout_constraintEnd_toStartOf="@id/columns_add"
+        app:layout_constraintTop_toTopOf="@id/columns_add" />
+
+    <ImageButton
+        android:id="@+id/columns_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/subtract_index_content_description"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@id/columns_subtract"
+        app:layout_constraintEnd_toEndOf="@id/subtract_scroll_index"
+        app:layout_constraintStart_toStartOf="@id/subtract_scroll_index" />
+
+    <ImageButton
+        android:id="@+id/columns_subtract"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/subtract_index_content_description"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toTopOf="@id/rows_add"
+        app:layout_constraintEnd_toEndOf="@id/subtract_scroll_index"
+        app:layout_constraintStart_toStartOf="@id/subtract_scroll_index" />
+
+    <TextView
+        android:id="@+id/rows_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/rows_text"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/rows_subtract"
+        app:layout_constraintEnd_toStartOf="@id/rows_add"
+        app:layout_constraintTop_toTopOf="@id/rows_add" />
+
+    <ImageButton
+        android:id="@+id/rows_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/subtract_index_content_description"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@id/rows_subtract"
+        app:layout_constraintEnd_toEndOf="@id/columns_subtract"
+        app:layout_constraintStart_toStartOf="@id/columns_subtract" />
+
+    <ImageButton
+        android:id="@+id/rows_subtract"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/subtract_index_content_description"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toTopOf="@id/rtl_enabled"
+        app:layout_constraintEnd_toEndOf="@id/rows_add"
+        app:layout_constraintStart_toStartOf="@id/rows_add" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/rtl_enabled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/rtl_switch"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
