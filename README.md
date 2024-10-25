@@ -27,8 +27,7 @@ Line break has been set to 160 characters.
 
 # Video presentation
 
-// todo add asset after upload to GitHub
-https://github.com/WojciechLatala/Custom-Layout-Manager/assets/id/id
+https://github.com/user-attachments/assets/56323163-c5a1-4eb4-97f2-05ddfdcbc28c
 
 # License
     Copyright 2024 Wojciech Latala
